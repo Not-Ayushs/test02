@@ -67,12 +67,35 @@ const App = () => {
 
     return (
     
-      <div className='p-10 flex gap-6'>
-        {users.map(function(elem){
+      // <div className='p-10 flex gap-6'>
+      //   {users.map(function(elem){
+      //     return <Card username={elem.name} age={elem.age} city={elem.city} profilePhoto={elem.profilePhoto}  />
+      //   })}
+              
+      // </div>
+
+      <div className="min-h-screen w-full bg-[#0f172a] relative">
+  {/* Dark Basic Grid Background - Faded */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#0f172a",
+      backgroundImage: `
+        linear-gradient(to right, rgba(148,163,184,0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148,163,184,0.2) 1px, transparent 1px)
+      `,
+      backgroundSize: "40px 40px",
+    }}
+  />
+  {/* Your Content/Components */}
+<div className='p-10 flex gap-6 relative z-20'>
+      {users.map(function(elem){
           return <Card username={elem.name} age={elem.age} city={elem.city} profilePhoto={elem.profilePhoto}  />
         })}
               
       </div>
+
+</div>
     
     );  
 }
